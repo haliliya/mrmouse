@@ -6,6 +6,7 @@
 	height: 4%;
 	background-color: red;
 	overflow: hidden;
+	z-index: 1;
 
 }
 
@@ -82,7 +83,12 @@ h1:hover{
 	float: left;
 	width: 33.33%;
 	padding: 5px;
-  }
+	filter: grayscale(100%);
+	}
+	
+	.column:hover{
+		filter: none;
+	}
 
   
 .row::after {
