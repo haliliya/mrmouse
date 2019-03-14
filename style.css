@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 5%;
+	height: 4%;
 	background-color: red;
 	overflow: hidden;
 }
@@ -13,9 +13,9 @@ li a
 	text-decoration: none;
 	color: white;
 	font-style: normal;
-	font-family: cursive;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 	text-decoration: none;
-	padding: 5px;
+	padding: 1%;
 }
 
 li a:hover
@@ -38,7 +38,7 @@ li:last-child
 
 h1
 {
-	font-family: cursive;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 	text-align: center;
 	border-collapse: separate;
 	border-spacing: 16px 0;
@@ -61,10 +61,15 @@ h1::before,h1::after{
 	border-top-style: solid;
 }
 
+h1:hover{
+	color: red;
+}
+
 #logo
 {
 	float: left;
-	padding-left: 2%;
+	padding-left: 1%;
+	padding-right: 1%;
 }
 
 #wallpaper
@@ -72,14 +77,17 @@ h1::before,h1::after{
 	padding-top: 10%;
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
 	float: left;
 	width: 33.33%;
 	padding: 5px;
+	filter: grayscale();
+  }
+
+  .column:hover{
+	   filter: none;
   }
   
-  /* Clear floats after image containers */
 .row::after {
 	content: "";
 	clear: both;
@@ -103,19 +111,18 @@ h1::before,h1::after{
 	width: 50%;
   }
 
-/* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-	width: 100%; /* Full width */
-	padding: 12px; /* Some padding */  
-	border: 1px solid #ccc; /* Gray border */
-	border-radius: 4px; /* Rounded borders */
-	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	margin-top: 6px; /* Add a top margin */
-	margin-bottom: 16px; /* Bottom margin */
-	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+	width: 100%; 
+	padding: 12px;  
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box; 
+	margin-top: 6px; 
+	margin-bottom: 16px; 
+	resize: vertical;
   }
   
-  /* Style the submit button with a specific background color etc */
+ 
   input[type=submit]{
 	background-color: red;
 	color: white;
@@ -123,7 +130,7 @@ input[type=text], select, textarea {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	font-family: cursive;
+	font-family:"Comic Sans MS", cursive, sans-serif;
   }
 
   input[type=reset]{
@@ -133,10 +140,10 @@ input[type=text], select, textarea {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	font-family: cursive;
+	font-family: "Comic Sans MS", cursive, sans-serif;
   }
   
-  /* When moving the mouse over the submit button, add a darker green color */
+
   input[type=submit]:hover {
 	background-color:black;
   }
@@ -145,14 +152,34 @@ input[type=text], select, textarea {
 	background-color: black;
   }
   
-  /* Add a background color and some padding around the form */
+ 
   .container {
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 20px;
-	font-family: cursive;
+	font-family: "Comic Sans MS", cursive, sans-serif;
   }
 
   p {
-	  font-family: cursive;
+	  font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+  #QR:hover {
+	animation: shake 0.5s; 
+  
+	animation-iteration-count: infinite; 
+  }
+  
+  @keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
