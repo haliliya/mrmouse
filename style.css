@@ -6,6 +6,7 @@
 	height: 4%;
 	background-color: red;
 	overflow: hidden;
+
 }
 
 li a
@@ -81,12 +82,8 @@ h1:hover{
 	float: left;
 	width: 33.33%;
 	padding: 5px;
-	filter: grayscale();
   }
 
-  .column:hover{
-	   filter: none;
-  }
   
 .row::after {
 	content: "";
